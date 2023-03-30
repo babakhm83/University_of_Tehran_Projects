@@ -112,7 +112,7 @@ vector<Places> extract_places_from_input(int argc, char const *argv[])
 	return Placess;
 }
 
-int do_ring_time(Places place, Time now)
+int remaining_time_this_place_is_open(Places place, Time now)
 {
 	return (place.close_time.hour - now.hour) * 60 +
 		   (place.close_time.minute - now.minute);
@@ -177,7 +177,7 @@ int find_best_place_index(const vector<Places> Placess, const Time now)
 		for (int i = 0; i < Placess.size(); i++)
 		{
 			if (!Placess[i].have_gone &&
-				do_ring_time(Placess[i], now) >= 15 &&
+				remaining_time_this_place_is_open(Placess[i], now) >= 15 &&
 				is_this_place_open(now, Placess[i].open_time))
 			{
 				index = i;
@@ -247,10 +247,10 @@ void where_to_go(vector<Places> Placess)
 		{
 			now.hour = Placess[index].open_time.hour;
 			now.minute = Placess[index].open_time.minute;
-			end_time = add_time(now, do_ring_time(Placess[index], now));
+			end_time = add_time(now, remaining_time_this_place_is_open(Placess[index], now));
 		}
 		else
-			end_time = add_time(now, do_ring_time(Placess[index], now));
+			end_time = add_time(now, remaining_time_this_place_is_open(Placess[index], now));
 		Placess[index].have_gone = true;
 		print_Places(Placess[index], now, end_time);
 		now = add_time(end_time, 30);
