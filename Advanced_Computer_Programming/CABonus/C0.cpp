@@ -142,6 +142,17 @@ bool is_this_place_open(Time t1, Time t2)
 	return false;
 }
 
+bool does_this_place_open_earlier(Time place1, Time place2)
+{
+	if (place1.hour < place2.hour ||
+		(place1.hour == place2.hour &&
+		 place1.minute < place2.minute))
+	{
+		return true;
+	}
+	return false;
+}
+
 int find_first_open_time(const vector<Places> Placess, Time start_time = {0, 0})
 {
 	int index = -1;
@@ -154,13 +165,10 @@ int find_first_open_time(const vector<Places> Placess, Time start_time = {0, 0})
 		}
 	for (int j = i + 1; j < Placess.size(); j++)
 	{
-		if ((Placess[j].open_time.hour < Placess[index].open_time.hour &&
-			 is_this_place_open(Placess[j].open_time, start_time)) ||
-			(Placess[j].open_time.hour == Placess[index].open_time.hour &&
-			 Placess[j].open_time.minute < Placess[index].open_time.minute &&
-			 is_this_place_open(Placess[j].open_time, start_time)))
+		if (is_this_place_open(Placess[j].open_time, start_time) &&
+			does_this_place_open_earlier(Placess[j].open_time,
+										 Placess[index].open_time))
 		{
-
 			index = j;
 		}
 	}
