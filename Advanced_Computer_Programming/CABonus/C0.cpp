@@ -10,6 +10,7 @@ using namespace std;
 #define RANK "rank"
 #define OPENINGTIME "openingTime"
 #define CLOSINGTIME "closingTime"
+#define MINUTESINHOUR 60
 
 struct Time
 {
@@ -114,29 +115,29 @@ vector<Places> extract_places_from_input(int argc, char const *argv[])
 
 int remaining_time_this_place_is_open(Places place, Time now)
 {
-	return (place.close_time.hour - now.hour) * 60 +
+	return (place.close_time.hour - now.hour) * MINUTESINHOUR +
 		   (place.close_time.minute - now.minute);
 }
 
 Time add_time(Time now, int doringTime)
 {
-	if (doringTime >= 60)
+	if (doringTime >= MINUTESINHOUR)
 	{
 		now.hour++;
 		return now;
 	}
 	now.minute += doringTime;
-	if (now.minute >= 60)
+	if (now.minute >= MINUTESINHOUR)
 	{
 		now.hour++;
-		now.minute -= 60;
+		now.minute -= MINUTESINHOUR;
 	}
 	return now;
 }
 
 bool is_this_place_open(Time t1, Time t2)
 {
-	if (t1.hour * 60 + t1.minute >= t2.hour * 60 + t2.minute)
+	if (t1.hour * MINUTESINHOUR + t1.minute >= t2.hour * MINUTESINHOUR + t2.minute)
 		return true;
 	return false;
 }
