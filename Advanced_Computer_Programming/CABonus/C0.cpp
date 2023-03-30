@@ -188,7 +188,7 @@ int find_best_place_index(const vector<Places> Placess, const Time now)
 	return index;
 }
 
-string time2string(Time t)
+string time_to_string(Time t)
 {
 	string str;
 	if (t.hour < 10)
@@ -205,8 +205,8 @@ string time2string(Time t)
 
 void print_Places(Places plc, Time start_time, Time end_time)
 {
-	string start = time2string(start_time);
-	string end = time2string(end_time);
+	string start = time_to_string(start_time);
+	string end = time_to_string(end_time);
 	cout << "Location " << plc.name << endl;
 	cout << "Visit from " << start << " until " << end << endl;
 	cout << "---" << endl;
