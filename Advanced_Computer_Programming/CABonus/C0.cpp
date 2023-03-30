@@ -122,7 +122,7 @@ Time add_time(Time now, int doringTime)
 {
 	if (doringTime >= 60)
 	{
-		now.hour += 1;
+		now.hour++;
 		return now;
 	}
 	now.minute += doringTime;
@@ -247,10 +247,12 @@ void where_to_go(vector<Places> Placess)
 		{
 			now.hour = Placess[index].open_time.hour;
 			now.minute = Placess[index].open_time.minute;
-			end_time = add_time(now, remaining_time_this_place_is_open(Placess[index], now));
+			end_time = add_time(now,
+								remaining_time_this_place_is_open(Placess[index], now));
 		}
 		else
-			end_time = add_time(now, remaining_time_this_place_is_open(Placess[index], now));
+			end_time = add_time(now,
+								remaining_time_this_place_is_open(Placess[index], now));
 		Placess[index].have_gone = true;
 		print_Places(Placess[index], now, end_time);
 		now = add_time(end_time, 30);
