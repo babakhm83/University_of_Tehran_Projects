@@ -134,7 +134,7 @@ Time add_time(Time now, int doringTime)
 	return now;
 }
 
-bool is_time_grater(Time t1, Time t2)
+bool is_this_place_open(Time t1, Time t2)
 {
 	if (t1.hour * 60 + t1.minute >= t2.hour * 60 + t2.minute)
 		return true;
@@ -146,7 +146,7 @@ int find_first_open_time(const vector<Places> Placess, Time start_time = {0, 0})
 	int index = -1;
 	int i;
 	for (i = 0; i < Placess.size(); i++)
-		if (is_time_grater(Placess[i].open_time, start_time))
+		if (is_this_place_open(Placess[i].open_time, start_time))
 		{
 			index = i;
 			break;
@@ -154,14 +154,14 @@ int find_first_open_time(const vector<Places> Placess, Time start_time = {0, 0})
 	for (int j = i + 1; j < Placess.size(); j++)
 	{
 		if (Placess[j].open_time.hour < Placess[index].open_time.hour &&
-			is_time_grater(Placess[j].open_time, start_time))
+			is_this_place_open(Placess[j].open_time, start_time))
 		{
 			index = j;
 			continue;
 		}
 		if (Placess[j].open_time.hour == Placess[index].open_time.hour &&
 			Placess[j].open_time.minute < Placess[index].open_time.minute &&
-			is_time_grater(Placess[j].open_time, start_time))
+			is_this_place_open(Placess[j].open_time, start_time))
 			index = j;
 	}
 	return index;
@@ -180,7 +180,7 @@ int find_best_place_index(const vector<Places> Placess, const Time now)
 		{
 			if (!Placess[i].have_gone &&
 				do_ring_time(Placess[i], now) >= 15 &&
-				is_time_grater(now, Placess[i].open_time))
+				is_this_place_open(now, Placess[i].open_time))
 			{
 				index = i;
 				return index;
