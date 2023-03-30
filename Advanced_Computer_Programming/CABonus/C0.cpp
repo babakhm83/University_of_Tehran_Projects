@@ -99,7 +99,7 @@ vector<string> make_list_of_input_lines(char const *argv[])
 	return lines;
 }
 
-vector<Places> get_command_line(int argc, char const *argv[])
+vector<Places> extract_places_from_input(int argc, char const *argv[])
 {
 	vector<string> lines = make_list_of_input_lines(argv);
 	vector<Places> Placess;
@@ -255,7 +255,7 @@ void WhereToGo(vector<Places> Placess)
 
 int main(int argc, char const *argv[])
 {
-	vector<Places> Placess = get_command_line(argc, argv);
+	vector<Places> Placess = extract_places_from_input(argc, argv);
 	WhereToGo(Placess);
 	return 0;
 }
