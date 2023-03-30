@@ -31,7 +31,7 @@ bool sort_by_rank(Places i, Places j)
 	return i.rank < j.rank;
 }
 
-vector<string> seperateWords(const string line, string separate_char = ",")
+vector<string> seperate_words(const string line, string separate_char = ",")
 {
 	vector<string> words;
 	string temp_line = line;
@@ -71,7 +71,7 @@ Indexes extract_indexes_from_input(vector<string> title)
 Places extract_place_from_input(vector<string> words, string line)
 {
 	Places place;
-	Indexes indexes = extract_indexes_from_input(seperateWords(line));
+	Indexes indexes = extract_indexes_from_input(seperate_words(line));
 	place.name = words[indexes.name];
 	place.rank = stoi(words[indexes.rank]);
 	place.open_time.hour = stoi(words[indexes.opentime]);
@@ -105,14 +105,14 @@ vector<Places> extract_places_from_input(int argc, char const *argv[])
 	vector<Places> Placess;
 	for (int i = 1; i < lines.size(); i++)
 	{
-		vector<string> words_in_line = seperateWords(lines[i]);
+		vector<string> words_in_line = seperate_words(lines[i]);
 		Placess.push_back(extract_place_from_input(words_in_line, lines[0]));
 	}
 	sort(Placess.begin(), Placess.end(), sort_by_rank);
 	return Placess;
 }
 
-int doringTime(Places plc, Time now)
+int do_ring_time(Places plc, Time now)
 {
 	return (plc.close_time.hour - now.hour) * 60 + (plc.close_time.minute - now.minute);
 }
@@ -174,7 +174,7 @@ int find_best_place_index(const vector<Places> Placess, const Time now)
 	{
 		for (int i = 0; i < Placess.size(); i++)
 		{
-			if (!Placess[i].have_gone && doringTime(Placess[i], now) >= 15 && is_time_grater(now, Placess[i].open_time))
+			if (!Placess[i].have_gone && do_ring_time(Placess[i], now) >= 15 && is_time_grater(now, Placess[i].open_time))
 			{
 				index = i;
 				return index;
@@ -221,7 +221,7 @@ Time skip_time(const vector<Places> Placess, Time now)
 	}
 }
 
-void WhereToGo(vector<Places> Placess)
+void where_to_go(vector<Places> Placess)
 {
 	Time now = {-1, -1};
 	Time end_time;
@@ -243,10 +243,10 @@ void WhereToGo(vector<Places> Placess)
 		{
 			now.hour = Placess[index].open_time.hour;
 			now.minute = Placess[index].open_time.minute;
-			end_time = add_time(now, doringTime(Placess[index], now));
+			end_time = add_time(now, do_ring_time(Placess[index], now));
 		}
 		else
-			end_time = add_time(now, doringTime(Placess[index], now));
+			end_time = add_time(now, do_ring_time(Placess[index], now));
 		Placess[index].have_gone = true;
 		print_Places(Placess[index], now, end_time);
 		now = add_time(end_time, 30);
@@ -256,6 +256,6 @@ void WhereToGo(vector<Places> Placess)
 int main(int argc, char const *argv[])
 {
 	vector<Places> Placess = extract_places_from_input(argc, argv);
-	WhereToGo(Placess);
+	where_to_go(Placess);
 	return 0;
 }
