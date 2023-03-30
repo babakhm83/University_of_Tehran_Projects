@@ -81,8 +81,9 @@ Places extract_place_from_input(vector<string> words, string line)
 	place.have_gone = false;
 	return place;
 }
-vector<Places> get_command_line(int argc, char const *argv[])
-{
+
+vector<string> make_list_of_input_lines(char const *argv[])
+{	
 	ifstream instream;
 	instream.open(argv[1]);
 	if (instream.fail())
@@ -95,6 +96,12 @@ vector<Places> get_command_line(int argc, char const *argv[])
 	while (getline(instream, temp_line))
 		lines.push_back(temp_line);
 	instream.close();
+	return lines;
+}
+
+vector<Places> get_command_line(int argc, char const *argv[])
+{
+	vector<string> lines = make_list_of_input_lines(argv);
 	vector<Places> Placess;
 	for (int i = 1; i < lines.size(); i++)
 	{
