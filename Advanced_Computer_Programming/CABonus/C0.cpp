@@ -6,6 +6,11 @@
 #include <vector>
 using namespace std;
 
+#define NAME "name"
+#define RANK "rank"
+#define OPENINGTIME "openingTime"
+#define CLOSINGTIME "closingTime"
+
 struct Time {
 	int hour;
 	int minute;
@@ -51,10 +56,10 @@ vector<Places> get_command_line(int argc, char const* argv[])
 	instream.close();
 	vector<string> title = seperateWords(lines[0]);
 	vector<Places> Placess;
-	int name_index = distance(title.begin(), find(title.begin(), title.end(), "name"));
-	int rank_index = distance(title.begin(), find(title.begin(), title.end(), "rank"));
-	int opentime_index = distance(title.begin(), find(title.begin(), title.end(), "openingTime"));
-	int closetime_index = distance(title.begin(), find(title.begin(), title.end(), "closingTime"));
+	int name_index = distance(title.begin(), find(title.begin(), title.end(), NAME));
+	int rank_index = distance(title.begin(), find(title.begin(), title.end(), RANK));
+	int opentime_index = distance(title.begin(), find(title.begin(), title.end(), OPENINGTIME));
+	int closetime_index = distance(title.begin(), find(title.begin(), title.end(), CLOSINGTIME));
 	for (int i = 1; i < lines.size(); i++) {
 		Places temp;
 		vector<string> words_in_line = seperateWords(lines[i]);
