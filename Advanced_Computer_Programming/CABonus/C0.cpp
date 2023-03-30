@@ -45,6 +45,13 @@ int find_position_of_data_in_input(vector<string> input, string data)
 	return distance(input.begin(), find(input.begin(), input.end(), data));
 }
 
+struct Indexes{
+	int name;
+	int rank;
+	int opentime;
+	int closetime;
+};
+
 vector<Places> get_command_line(int argc, char const* argv[])
 {
 	ifstream instream;
@@ -61,19 +68,20 @@ vector<Places> get_command_line(int argc, char const* argv[])
 	instream.close();
 	vector<string> title = seperateWords(lines[0]);
 	vector<Places> Placess;
-	int name_index = find_position_of_data_in_input(title, NAME);
-	int rank_index = find_position_of_data_in_input(title, RANK);
-	int opentime_index = find_position_of_data_in_input(title, OPENINGTIME);
-	int closetime_index = find_position_of_data_in_input(title, CLOSINGTIME);
+	Indexes indexes;
+	indexes.name = find_position_of_data_in_input(title, NAME);
+	indexes.rank = find_position_of_data_in_input(title, RANK);
+	indexes.opentime = find_position_of_data_in_input(title, OPENINGTIME);
+	indexes.closetime = find_position_of_data_in_input(title, CLOSINGTIME);
 	for (int i = 1; i < lines.size(); i++) {
 		Places temp_place;
 		vector<string> words_in_line = seperateWords(lines[i]);
-		temp_place.name = words_in_line[name_index];
-		temp_place.rank = stoi(words_in_line[rank_index]);
-		temp_place.open_time.hour = stoi(words_in_line[opentime_index]);
-		temp_place.open_time.minute = stoi(words_in_line[opentime_index].substr(3));
-		temp_place.close_time.hour = stoi(words_in_line[closetime_index]);
-		temp_place.close_time.minute = stoi(words_in_line[closetime_index].substr(3));
+		temp_place.name = words_in_line[indexes.name];
+		temp_place.rank = stoi(words_in_line[indexes.rank]);
+		temp_place.open_time.hour = stoi(words_in_line[indexes.opentime]);
+		temp_place.open_time.minute = stoi(words_in_line[indexes.opentime].substr(3));
+		temp_place.close_time.hour = stoi(words_in_line[indexes.closetime]);
+		temp_place.close_time.minute = stoi(words_in_line[indexes.closetime].substr(3));
 		temp_place.have_gone = false;
 		Placess.push_back(temp_place);
 	}
