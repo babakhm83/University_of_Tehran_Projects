@@ -68,6 +68,19 @@ Indexes extract_indexes_from_input(vector<string> title)
 	return indexes;
 }
 
+Places extract_place_from_input(vector<string> words, string line)
+{
+	Places place;
+	Indexes indexes = extract_indexes_from_input(seperateWords(line));
+	place.name = words[indexes.name];
+	place.rank = stoi(words[indexes.rank]);
+	place.open_time.hour = stoi(words[indexes.opentime]);
+	place.open_time.minute = stoi(words[indexes.opentime].substr(3));
+	place.close_time.hour = stoi(words[indexes.closetime]);
+	place.close_time.minute = stoi(words[indexes.closetime].substr(3));
+	place.have_gone = false;
+	return place;
+}
 vector<Places> get_command_line(int argc, char const *argv[])
 {
 	ifstream instream;
@@ -83,19 +96,10 @@ vector<Places> get_command_line(int argc, char const *argv[])
 		lines.push_back(temp_line);
 	instream.close();
 	vector<Places> Placess;
-	Indexes indexes = extract_indexes_from_input(seperateWords(lines[0]));
 	for (int i = 1; i < lines.size(); i++)
 	{
-		Places temp_place;
 		vector<string> words_in_line = seperateWords(lines[i]);
-		temp_place.name = words_in_line[indexes.name];
-		temp_place.rank = stoi(words_in_line[indexes.rank]);
-		temp_place.open_time.hour = stoi(words_in_line[indexes.opentime]);
-		temp_place.open_time.minute = stoi(words_in_line[indexes.opentime].substr(3));
-		temp_place.close_time.hour = stoi(words_in_line[indexes.closetime]);
-		temp_place.close_time.minute = stoi(words_in_line[indexes.closetime].substr(3));
-		temp_place.have_gone = false;
-		Placess.push_back(temp_place);
+		Placess.push_back(extract_place_from_input(words_in_line, lines[0]));
 	}
 	sort(Placess.begin(), Placess.end(), sort_by_rank);
 	return Placess;
