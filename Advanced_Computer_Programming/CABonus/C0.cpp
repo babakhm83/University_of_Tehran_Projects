@@ -83,7 +83,7 @@ Places extract_place_from_input(vector<string> words, string line)
 }
 
 vector<string> make_list_of_input_lines(char const *argv[])
-{	
+{
 	ifstream instream;
 	instream.open(argv[1]);
 	if (instream.fail())
@@ -114,7 +114,8 @@ vector<Places> extract_places_from_input(int argc, char const *argv[])
 
 int do_ring_time(Places plc, Time now)
 {
-	return (plc.close_time.hour - now.hour) * 60 + (plc.close_time.minute - now.minute);
+	return (plc.close_time.hour - now.hour) * 60 +
+		   (plc.close_time.minute - now.minute);
 }
 
 Time add_time(Time now, int doringTime)
@@ -152,12 +153,15 @@ int find_first_open_time(const vector<Places> Placess, Time start_time = {0, 0})
 		}
 	for (int j = i + 1; j < Placess.size(); j++)
 	{
-		if (Placess[j].open_time.hour < Placess[index].open_time.hour && is_time_grater(Placess[j].open_time, start_time))
+		if (Placess[j].open_time.hour < Placess[index].open_time.hour &&
+			is_time_grater(Placess[j].open_time, start_time))
 		{
 			index = j;
 			continue;
 		}
-		if (Placess[j].open_time.hour == Placess[index].open_time.hour && Placess[j].open_time.minute < Placess[index].open_time.minute && is_time_grater(Placess[j].open_time, start_time))
+		if (Placess[j].open_time.hour == Placess[index].open_time.hour &&
+			Placess[j].open_time.minute < Placess[index].open_time.minute &&
+			is_time_grater(Placess[j].open_time, start_time))
 			index = j;
 	}
 	return index;
@@ -174,7 +178,9 @@ int find_best_place_index(const vector<Places> Placess, const Time now)
 	{
 		for (int i = 0; i < Placess.size(); i++)
 		{
-			if (!Placess[i].have_gone && do_ring_time(Placess[i], now) >= 15 && is_time_grater(now, Placess[i].open_time))
+			if (!Placess[i].have_gone &&
+				do_ring_time(Placess[i], now) >= 15 &&
+				is_time_grater(now, Placess[i].open_time))
 			{
 				index = i;
 				return index;
