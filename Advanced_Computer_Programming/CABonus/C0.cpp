@@ -40,6 +40,11 @@ vector<string> seperateWords(const string line, string separate_char = ",") {
 	return words;
 }
 
+int find_position_of_data_in_input(vector<string> input, string data)
+{
+	return distance(input.begin(), find(input.begin(), input.end(), data));
+}
+
 vector<Places> get_command_line(int argc, char const* argv[])
 {
 	ifstream instream;
@@ -56,10 +61,10 @@ vector<Places> get_command_line(int argc, char const* argv[])
 	instream.close();
 	vector<string> title = seperateWords(lines[0]);
 	vector<Places> Placess;
-	int name_index = distance(title.begin(), find(title.begin(), title.end(), NAME));
-	int rank_index = distance(title.begin(), find(title.begin(), title.end(), RANK));
-	int opentime_index = distance(title.begin(), find(title.begin(), title.end(), OPENINGTIME));
-	int closetime_index = distance(title.begin(), find(title.begin(), title.end(), CLOSINGTIME));
+	int name_index = find_position_of_data_in_input(title, NAME);
+	int rank_index = find_position_of_data_in_input(title, RANK);
+	int opentime_index = find_position_of_data_in_input(title, OPENINGTIME);
+	int closetime_index = find_position_of_data_in_input(title, CLOSINGTIME);
 	for (int i = 1; i < lines.size(); i++) {
 		Places temp;
 		vector<string> words_in_line = seperateWords(lines[i]);
