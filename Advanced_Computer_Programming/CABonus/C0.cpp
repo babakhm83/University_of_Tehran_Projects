@@ -163,7 +163,7 @@ int find_first_open_time(const vector<Places> Placess, Time start_time = {0, 0})
 	return index;
 }
 
-int find_best_plce_index(const vector<Places> Placess, const Time now)
+int find_best_place_index(const vector<Places> Placess, const Time now)
 {
 	int index = -1;
 	if (now.minute == -1)
@@ -227,7 +227,7 @@ void WhereToGo(vector<Places> Placess)
 	Time end_time;
 	for (int i = 0; i < Placess.size(); i++)
 	{
-		int index = find_best_plce_index(Placess, now);
+		int index = find_best_place_index(Placess, now);
 		if (index == -1)
 		{
 			now = skip_time(Placess, add_time(now, 1));
