@@ -153,20 +153,18 @@ int find_first_open_time(const vector<Places> Placess, Time start_time = {0, 0})
 		}
 	for (int j = i + 1; j < Placess.size(); j++)
 	{
-		if (Placess[j].open_time.hour < Placess[index].open_time.hour &&
-			is_this_place_open(Placess[j].open_time, start_time))
+		if ((Placess[j].open_time.hour < Placess[index].open_time.hour &&
+			 is_this_place_open(Placess[j].open_time, start_time)) ||
+			(Placess[j].open_time.hour == Placess[index].open_time.hour &&
+			 Placess[j].open_time.minute < Placess[index].open_time.minute &&
+			 is_this_place_open(Placess[j].open_time, start_time)))
 		{
+
 			index = j;
-			continue;
 		}
-		if (Placess[j].open_time.hour == Placess[index].open_time.hour &&
-			Placess[j].open_time.minute < Placess[index].open_time.minute &&
-			is_this_place_open(Placess[j].open_time, start_time))
-			index = j;
 	}
 	return index;
 }
-
 int find_best_place_index(const vector<Places> Placess, const Time now)
 {
 	int index = -1;
