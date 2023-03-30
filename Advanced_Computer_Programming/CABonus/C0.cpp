@@ -112,10 +112,10 @@ vector<Places> extract_places_from_input(int argc, char const *argv[])
 	return Placess;
 }
 
-int do_ring_time(Places plc, Time now)
+int do_ring_time(Places place, Time now)
 {
-	return (plc.close_time.hour - now.hour) * 60 +
-		   (plc.close_time.minute - now.minute);
+	return (place.close_time.hour - now.hour) * 60 +
+		   (place.close_time.minute - now.minute);
 }
 
 Time add_time(Time now, int doringTime)
@@ -203,11 +203,11 @@ string time_to_string(Time t)
 	return str;
 }
 
-void print_Places(Places plc, Time start_time, Time end_time)
+void print_Places(Places place, Time start_time, Time end_time)
 {
 	string start = time_to_string(start_time);
 	string end = time_to_string(end_time);
-	cout << "Location " << plc.name << endl;
+	cout << "Location " << place.name << endl;
 	cout << "Visit from " << start << " until " << end << endl;
 	cout << "---" << endl;
 }
