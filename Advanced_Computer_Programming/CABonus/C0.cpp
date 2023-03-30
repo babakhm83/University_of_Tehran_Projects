@@ -30,13 +30,13 @@ bool sort_by_rank(Places i, Places j) {
 
 vector<string> seperateWords(const string line, string separate_char = ",") {
 	vector<string> words;
-	string temp = line;
+	string temp_line = line;
 	size_t pos = 0;
-	while ((pos = temp.find(separate_char)) != string::npos) {
-		words.push_back(temp.substr(0, pos));
-		temp.erase(0, pos + separate_char.length());
+	while ((pos = temp_line.find(separate_char)) != string::npos) {
+		words.push_back(temp_line.substr(0, pos));
+		temp_line.erase(0, pos + separate_char.length());
 	}
-	words.push_back(temp);
+	words.push_back(temp_line);
 	return words;
 }
 
@@ -55,9 +55,9 @@ vector<Places> get_command_line(int argc, char const* argv[])
 		exit(1);
 	}
 	vector<string> lines;
-	string temp;
-	while (getline(instream, temp))
-		lines.push_back(temp);
+	string temp_line;
+	while (getline(instream, temp_line))
+		lines.push_back(temp_line);
 	instream.close();
 	vector<string> title = seperateWords(lines[0]);
 	vector<Places> Placess;
@@ -66,16 +66,16 @@ vector<Places> get_command_line(int argc, char const* argv[])
 	int opentime_index = find_position_of_data_in_input(title, OPENINGTIME);
 	int closetime_index = find_position_of_data_in_input(title, CLOSINGTIME);
 	for (int i = 1; i < lines.size(); i++) {
-		Places temp;
+		Places temp_place;
 		vector<string> words_in_line = seperateWords(lines[i]);
-		temp.name = words_in_line[name_index];
-		temp.rank = stoi(words_in_line[rank_index]);
-		temp.open_time.hour = stoi(words_in_line[opentime_index]);
-		temp.open_time.minute = stoi(words_in_line[opentime_index].substr(3));
-		temp.close_time.hour = stoi(words_in_line[closetime_index]);
-		temp.close_time.minute = stoi(words_in_line[closetime_index].substr(3));
-		temp.have_gone = false;
-		Placess.push_back(temp);
+		temp_place.name = words_in_line[name_index];
+		temp_place.rank = stoi(words_in_line[rank_index]);
+		temp_place.open_time.hour = stoi(words_in_line[opentime_index]);
+		temp_place.open_time.minute = stoi(words_in_line[opentime_index].substr(3));
+		temp_place.close_time.hour = stoi(words_in_line[closetime_index]);
+		temp_place.close_time.minute = stoi(words_in_line[closetime_index].substr(3));
+		temp_place.have_gone = false;
+		Placess.push_back(temp_place);
 	}
 	sort(Placess.begin(), Placess.end(), sort_by_rank);
 	return Placess;
