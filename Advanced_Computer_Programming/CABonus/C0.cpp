@@ -119,14 +119,14 @@ int remaining_time_this_place_is_open(Places place, Time now)
 		   (place.close_time.minute - now.minute);
 }
 
-Time add_time(Time now, int doringTime)
+Time add_time(Time now, int added_minutes)
 {
-	if (doringTime >= MINUTESINHOUR)
+	if (added_minutes >= MINUTESINHOUR)
 	{
 		now.hour++;
 		return now;
 	}
-	now.minute += doringTime;
+	now.minute += added_minutes;
 	if (now.minute >= MINUTESINHOUR)
 	{
 		now.hour++;
