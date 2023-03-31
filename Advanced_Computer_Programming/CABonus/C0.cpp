@@ -268,10 +268,8 @@ void where_to_go(vector<Places> Placess)
 		{
 			now.hour = Placess[index].open_time.hour;
 			now.minute = Placess[index].open_time.minute;
-			end_time = set_end_time(Placess[index], now);
 		}
-		else
-			end_time = set_end_time(Placess[index], now);
+		end_time = set_end_time(Placess[index], now);
 		Placess[index].have_gone = true;
 		print_Places(Placess[index], now, end_time);
 		now = add_time(end_time, 30);
