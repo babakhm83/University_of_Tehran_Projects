@@ -254,7 +254,7 @@ void where_to_go(vector<Places> Placess)
 				break;
 			else
 			{
-				i = i - 1;
+				i--;
 				continue;
 			}
 		}
