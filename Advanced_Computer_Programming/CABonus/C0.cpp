@@ -258,7 +258,7 @@ void where_to_go(vector<Places> Placess)
 				continue;
 			}
 		}
-		if (now.minute == -1)
+		if (i == 0)
 		{
 			now.hour = Placess[index].open_time.hour;
 			now.minute = Placess[index].open_time.minute;
