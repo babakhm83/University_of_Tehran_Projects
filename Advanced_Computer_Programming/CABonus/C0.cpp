@@ -246,6 +246,14 @@ Time set_end_time(Places place, Time now)
 					remaining_time_this_place_is_open(place, now));
 }
 
+Time change_time_for_the_first_place(Places place)
+{
+	Time now;
+	now.hour = place.open_time.hour;
+	now.minute = place.open_time.minute;
+	return now;
+}
+
 void where_to_go(vector<Places> Placess)
 {
 	Time now = {-1, -1};
@@ -266,8 +274,7 @@ void where_to_go(vector<Places> Placess)
 		}
 		if (i == 0)
 		{
-			now.hour = Placess[index].open_time.hour;
-			now.minute = Placess[index].open_time.minute;
+			now = change_time_for_the_first_place(Placess[index]);
 		}
 		end_time = set_end_time(Placess[index], now);
 		Placess[index].have_gone = true;
