@@ -174,6 +174,21 @@ int find_first_open_time(const vector<Places> Placess, Time start_time = {0, 0})
 	}
 	return index;
 }
+
+int find_best_place_to_visit_after_first_place(const vector<Places> Placess, const Time now)
+{
+	for (int i = 0; i < Placess.size(); i++)
+	{
+		if (!Placess[i].have_gone &&
+			remaining_time_this_place_is_open(Placess[i], now) >= 15 &&
+			is_this_place_open(now, Placess[i].open_time))
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+
 int find_best_place_index(const vector<Places> Placess, const Time now)
 {
 	int index = -1;
@@ -183,16 +198,7 @@ int find_best_place_index(const vector<Places> Placess, const Time now)
 	}
 	else
 	{
-		for (int i = 0; i < Placess.size(); i++)
-		{
-			if (!Placess[i].have_gone &&
-				remaining_time_this_place_is_open(Placess[i], now) >= 15 &&
-				is_this_place_open(now, Placess[i].open_time))
-			{
-				index = i;
-				return index;
-			}
-		}
+		index = find_best_place_to_visit_after_first_place(Placess, now);
 	}
 	return index;
 }
