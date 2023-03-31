@@ -107,7 +107,8 @@ vector<Places> extract_places_from_input(int argc, char const *argv[])
 	for (int i = 1; i < lines.size(); i++)
 	{
 		vector<string> words_in_line = seperate_words(lines[i]);
-		places_list.push_back(extract_place_from_input(words_in_line, lines[0]));
+		places_list.push_back(extract_place_from_input(words_in_line,
+													   lines[0]));
 	}
 	sort(places_list.begin(), places_list.end(), sort_by_rank);
 	return places_list;
@@ -137,7 +138,8 @@ Time add_time(Time now, int added_minutes)
 
 bool is_this_place_open(Time t1, Time t2)
 {
-	if (t1.hour * MINUTESINHOUR + t1.minute >= t2.hour * MINUTESINHOUR + t2.minute)
+	if (t1.hour * MINUTESINHOUR + t1.minute >=
+		t2.hour * MINUTESINHOUR + t2.minute)
 		return true;
 	return false;
 }
@@ -153,7 +155,8 @@ bool does_this_place_open_earlier(Time place1, Time place2)
 	return false;
 }
 
-int find_first_open_time(const vector<Places> places_list, Time start_time = {0, 0})
+int find_first_open_time(const vector<Places> places_list,
+						 Time start_time = {0, 0})
 {
 	int index = -1;
 	int i;
@@ -175,7 +178,8 @@ int find_first_open_time(const vector<Places> places_list, Time start_time = {0,
 	return index;
 }
 
-int find_best_place_to_visit_after_first_place(const vector<Places> places_list, const Time now)
+int find_best_place_to_visit_after_first_place(const vector<Places> places_list,
+											   const Time now)
 {
 	for (int i = 0; i < places_list.size(); i++)
 	{
@@ -189,7 +193,8 @@ int find_best_place_to_visit_after_first_place(const vector<Places> places_list,
 	return -1;
 }
 
-int find_best_place_index(const vector<Places> places_list, const Time now)
+int find_best_place_index(const vector<Places> places_list,
+						  const Time now)
 {
 	int index = -1;
 	if (now.minute == -1)
@@ -198,7 +203,8 @@ int find_best_place_index(const vector<Places> places_list, const Time now)
 	}
 	else
 	{
-		index = find_best_place_to_visit_after_first_place(places_list, now);
+		index = find_best_place_to_visit_after_first_place(places_list,
+														   now);
 	}
 	return index;
 }
