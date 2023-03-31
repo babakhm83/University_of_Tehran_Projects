@@ -240,6 +240,12 @@ Time skip_time(const vector<Places> Placess, Time now)
 	}
 }
 
+Time set_end_time(Places place, Time now)
+{
+	return add_time(now,
+					remaining_time_this_place_is_open(place, now));
+}
+
 void where_to_go(vector<Places> Placess)
 {
 	Time now = {-1, -1};
@@ -262,12 +268,10 @@ void where_to_go(vector<Places> Placess)
 		{
 			now.hour = Placess[index].open_time.hour;
 			now.minute = Placess[index].open_time.minute;
-			end_time = add_time(now,
-								remaining_time_this_place_is_open(Placess[index], now));
+			end_time = set_end_time(Placess[index], now);
 		}
 		else
-			end_time = add_time(now,
-								remaining_time_this_place_is_open(Placess[index], now));
+			end_time = set_end_time(Placess[index], now);
 		Placess[index].have_gone = true;
 		print_Places(Placess[index], now, end_time);
 		now = add_time(end_time, 30);
