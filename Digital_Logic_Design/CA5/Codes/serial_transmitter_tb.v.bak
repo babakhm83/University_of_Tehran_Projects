@@ -1,0 +1,58 @@
+`timescale 1ns/1ns
+module serial_transmitter_tb();
+    reg serin=1, clk=0, rst=1;
+    wire serout;
+    wire [2:0] ns;
+    serial_transmitter st(serout);
+    always #50 clk=~clk;
+    initial begin
+        #300; rst=0;
+	#200;
+        #75;
+        #100; serin=0;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=1;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=1;
+        #100; serin=1;
+        #100; serin=0;
+        #100; serin=0;
+        #100; serin=1;
+        #100; serin=1;
+        #10000
+        $stop;
+    end
+endmodule
