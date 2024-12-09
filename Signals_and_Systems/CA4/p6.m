@@ -1,0 +1,12 @@
+clc;clearvars;
+msg='signal';
+coded=coding_amp(msg,1);
+noise_std=0.01;
+noise=noise_std*randn(1,length(coded));
+decoding_amp(coded+noise,1)
+coded=coding_amp(msg,2);
+noise=noise_std*randn(1,length(coded));
+decoding_amp(coded+noise,2)
+coded=coding_amp(msg,3);
+noise=noise_std*randn(1,length(coded));
+decoding_amp(coded+noise,3)
