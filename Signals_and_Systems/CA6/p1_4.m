@@ -1,0 +1,53 @@
+fs=100;
+ts=1/fs;
+t_start=0;
+t_end=1;
+T=t_end-t_start;
+N = fs * T;
+t = t_start:ts:t_end-ts;
+f = -fs/2:fs/N:fs/2-fs/N;
+fc=5;
+alpha=0.5;
+beta=0.3;
+R=250000;
+V=180/3.6;
+fd=beta*V;
+C=3e8;
+Ro=2/C;
+td=Ro*R;
+x_no_noise=alpha*cos(2*pi*(fc+fd)*(t-td));
+std=0:0.01:3;
+n_test=100;
+error_R=zeros(size(std));
+error_V=zeros(size(std));
+idx=0;
+for noise_std=std
+    idx=idx+1;
+    for j=1:n_test
+        noise=noise_std*randn(size(x_no_noise));
+        x=x_no_noise+noise;
+        X=fftshift(fft(x));
+        X=X/max(abs(X));
+        tol = 1e-2;
+        X(abs(X) < tol) = 0;
+        [M,new_freq]=max(X(length(X)/2+2+fc:length(X)));
+        new_freq=new_freq+fc;
+        new_phase=abs(angle(X(new_freq+length(X)/2+1)));
+        estimated_fd=new_freq-fc;
+        estimated_td=new_phase/(2*pi*(fc+estimated_fd));
+        estimated_V=estimated_fd/beta;
+        estimated_R=estimated_td/Ro;
+        error_R(idx)=error_R(idx)+(abs(estimated_R-R))/(n_test*R);
+        error_V(idx)=error_V(idx)+(abs(estimated_V-V))/(n_test*V);
+    end
+end
+figure;
+hold on;
+plot(std,error_R,'LineWidth',2);
+plot(std,error_V,'LineWidth',2);
+lgd=legend('Error for Distance','Error for Velocity');
+lgd.FontSize = 20;
+tle=title('Mean Absolute Error for R and V');
+tle.FontSize=20;
+xlabel('Noise std');
+hold off;

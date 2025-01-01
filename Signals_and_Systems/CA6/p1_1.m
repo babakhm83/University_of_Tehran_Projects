@@ -1,0 +1,14 @@
+fs=100;
+ts=1/fs;
+t_start=0;
+t_end=1;
+T=t_end-t_start;
+N = fs * T;
+t = t_start:ts:t_end-ts;
+f = -fs/2:fs/N:fs/2-fs/N;
+fc=5;
+x=cos(2*pi*fc*t);
+plot(t,x);
+title('x(t)=cos(2*\pi*fc*t)');
+xlabel('Time (s)');
+ylabel 'x(t)';
