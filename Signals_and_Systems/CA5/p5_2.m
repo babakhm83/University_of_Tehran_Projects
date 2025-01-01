@@ -1,0 +1,9 @@
+clc;clearvars;
+msg='signal';
+coded=coding_freq(msg,1);
+noise_std=0.01;
+noise=noise_std*randn(1,length(coded));
+decoding_freq(coded+noise,1)
+coded=coding_freq(msg,5);
+noise=noise_std*randn(1,length(coded));
+decoding_freq(coded+noise,5)
