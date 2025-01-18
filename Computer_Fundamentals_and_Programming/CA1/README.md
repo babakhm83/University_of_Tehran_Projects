@@ -1,52 +1,61 @@
-# Computer Fundamentals and Programming - CA1
+# CA1 - Computer Fundamentals and Programming
 
-This repository contains solutions for the Computer Fundamentals and Programming course (CA1) that demonstrate basic programming concepts and algorithms in C.
+This project consists of three parts, each focusing on different aspects of programming in C. The goal of this project is to solve real-world problems using concepts like conditionals, loops, and numerical methods.
 
-## Description of Files
+## Problem Breakdown
 
-### `1.c`
-This program calculates the number of jumps required to reach a specific height based on the given input. The height is computed based on a floor value derived from the user input, and the program simulates jumping with a trampoline to reach the desired height.
+### Part 1: Trampoline Jump Calculation
+- **Objective**: Help Parisa reach the professor's office by jumping on a trampoline, considering the room’s floor number, the height of each floor, and the initial jump height.
+- **Input**: 
+  - A three-digit integer representing the room number.
+  - A floating-point number representing the initial jump height.
+- **Output**: 
+  - The region where the trampoline should be placed.
+  - The number of jumps required to reach the desired floor.
 
-#### Key Features:
-- Calculates which part of the trampoline the user should place.
-- Determines the number of jumps required to reach a specific height.
+**Sample Input/Output**:
+Input: 311 0.6
+Output: 3 3
 
-### `2.c`
-This program computes the total kilocalories consumed based on a list of food items. It compares the total caloric intake to the daily caloric expenditure (100 kcal per item) and determines if the user is overweight, underweight, or at a stable weight.
+### Part 2: Calorie Calculation for Weight Management
+- **Objective**: Help Sohail track his calorie intake over `n` days based on his food choices and determine whether he gains weight, loses weight, or maintains it.
+- **Input**: 
+  - An integer `n` representing the number of days.
+  - `n` integers, each representing a type of food consumed.
+- **Output**:
+  - "chagh" if Sohail gains weight.
+  - "laghar" if Sohail loses weight.
+  - "bedoon taghir" if there is no change in weight.
 
-#### Key Features:
-- Defines the caloric content of various foods.
-- Takes input for the number of food items and calculates the total caloric intake.
-- Outputs "chagh" (overweight), "laghar" (underweight), or "bedoon taghir" (no change) based on the comparison.
+**Sample Input/Output**:
+Input: 4 6 2 9 5
+Output: chagh
 
-### `3.c`
-This program calculates the roots of a cubic function by simulating different values for `x` and identifying sign changes in the function's output. It uses both numerical approximation and analytical methods to find the roots.
+### Part 3: Root Finding for Cubic Equations (Bonus)
+- **Objective**: Help Navid find the real roots of a cubic equation using numerical methods. The roots are found within a defined range based on the coefficients provided.
+- **Input**: 
+  - Three coefficients of the cubic equation.
+  - A floating-point number specifying the allowed error for finding the roots.
+- **Output**: 
+  - Up to three real roots of the equation. If no roots are found, print "bedoon rishe".
 
-#### Key Features:
-- Finds roots of cubic equations by testing different values for `x`.
-- Uses an approximation method to find roots and refine them.
-- If a root corresponds to a point where the derivative is zero, it computes the root precisely using a quadratic formula.
+**Sample Input/Output**:
+Input: 1 2 3 0.0009
+Output: bedoon rishe bedoon rishe
 
 ## Compilation and Execution
 
-To compile and run any of the files, use a C compiler such as GCC:
+To compile and run the program, follow these steps:
 
-1. Compile a file:
+1. **Compile the program**:
+   ```bash
+   gcc -o ca1 1.c 2.c 3.c -lm
+   
+2. **Run the program**:
+    ./ca1
+   
+4. **Provide the required inputs** as specified in the problem description.
 
-    ```bash
-    gcc 1.c -o 1
-    gcc 2.c -o 2
-    gcc 3.c -o 3
-    ```
-
-2. Run the compiled program:
-
-    ```bash
-    ./1
-    ./2
-    ./3
-    ```
-
-## Dependencies
-
-- No external libraries or dependencies are required, apart from the standard C library.
+Credits
+Instructor: Dr. Moradi, Dr. Hashemi
+Course: Computer Fundamentals and Programming, Faculty of Electrical and Computer Engineering, University of Tehran
