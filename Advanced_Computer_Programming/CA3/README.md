@@ -35,7 +35,6 @@ The program contains several key functions:
 
 #### Teacher Information:
 
-        ```plaintext
         2
         Hamid 3 Saturday Monday Wednesday 2 Math Physics
         Amin 3 Saturday Sunday Monday 2 Math Science
@@ -45,7 +44,6 @@ The program contains several key functions:
         Science Monday Sunday 07:30 13:00
 
 ### Output:
-        ```plaintext
         Math
         Hamid: 07:30 09:00
         Amin: 07:30 09:00
@@ -58,9 +56,7 @@ The program contains several key functions:
 
 ## Compilation:
 To compile the program, run the following command:
-        ```bash
         g++ -o schedule A3-810101408.cpp
 ## Running the Program:
 After compilation, you can run the program using:
-        ```bash
         ./schedule
