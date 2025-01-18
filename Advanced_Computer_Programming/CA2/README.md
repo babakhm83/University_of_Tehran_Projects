@@ -44,4 +44,5 @@ g++ -o Q2 Q2.cpp
 g++ -o Q3 Q3.cpp
 ./Q3
 
+
 Each program expects input from standard input (e.g., keyboard or input redirection). The output will be printed to the console.
