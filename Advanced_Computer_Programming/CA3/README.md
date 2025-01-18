@@ -35,25 +35,26 @@ The program contains several key functions:
 
 #### Teacher Information:
 
-```plaintext
-2
-Hamid 3 Saturday Monday Wednesday 2 Math Physics
-Amin 3 Saturday Sunday Monday 2 Math Science
-3
-Math Saturday Monday 07:30 10:00
-Physics Saturday Wednesday 08:00 11:00
-Science Monday Sunday 07:30 13:00
+        ```plaintext
+        2
+        Hamid 3 Saturday Monday Wednesday 2 Math Physics
+        Amin 3 Saturday Sunday Monday 2 Math Science
+        3
+        Math Saturday Monday 07:30 10:00
+        Physics Saturday Wednesday 08:00 11:00
+        Science Monday Sunday 07:30 13:00
 
 ### Output:
-Math
-Hamid: 07:30 09:00
-Amin: 07:30 09:00
-Physics
-Hamid: 09:30 11:00
-Not Found
-Science
-Amin: 11:30 13:00
-Amin: 09:30 11:00
+        ```plaintext
+        Math
+        Hamid: 07:30 09:00
+        Amin: 07:30 09:00
+        Physics
+        Hamid: 09:30 11:00
+        Not Found
+        Science
+        Amin: 11:30 13:00
+        Amin: 09:30 11:00
 
 ## Compilation:
 To compile the program, run the following command:
