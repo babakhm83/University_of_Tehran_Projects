@@ -34,7 +34,7 @@ The final problem involves a board with `N` and `O` characters placed in a 7x7 g
 ### How to Compile and Run
 To compile the programs, you can use g++ (or any C++ compiler):
 
-``bash
+```bash
 g++ -o Q0 Q0.cpp
 ./Q0
 g++ -o Q1 Q1.cpp
