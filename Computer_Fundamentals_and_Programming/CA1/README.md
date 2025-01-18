@@ -6,8 +6,10 @@ This repository contains solutions for the Computer Fundamentals and Programming
 
 The project has the following directory structure:
 
-└── CA1/ ├── 1.c ├── 2.c └── 3.c
-
+└── CA1/
+    ├── 1.c
+    ├── 2.c
+    └── 3.c
 
 ## Description of Files
 
