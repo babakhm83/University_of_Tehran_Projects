@@ -52,6 +52,7 @@ To compile and run the program, follow these steps:
    gcc -o ca1 1.c 2.c 3.c -lm
    
 2. **Run the program**:
+   ```bash
     ./ca1
    
 4. **Provide the required inputs** as specified in the problem description.
