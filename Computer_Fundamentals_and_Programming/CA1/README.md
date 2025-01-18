@@ -2,15 +2,6 @@
 
 This repository contains solutions for the Computer Fundamentals and Programming course (CA1) that demonstrate basic programming concepts and algorithms in C.
 
-## Directory Structure
-
-The project has the following directory structure:
-
-    └── CA1/
-        ├── 1.c
-        ├── 2.c
-        └── 3.c
-
 ## Description of Files
 
 ### `1.c`
