@@ -34,14 +34,14 @@ The final problem involves a board with `N` and `O` characters placed in a 7x7 g
 ### How to Compile and Run
 To compile the programs, you can use g++ (or any C++ compiler):
 
-  ```bash
-  g++ -o Q0 Q0.cpp
-  ./Q0
-  g++ -o Q1 Q1.cpp
-  ./Q1
-  g++ -o Q2 Q2.cpp
-  ./Q2
-  g++ -o Q3 Q3.cpp
-  ./Q3
+    ```bash
+    g++ -o Q0 Q0.cpp
+    ./Q0
+    g++ -o Q1 Q1.cpp
+    ./Q1
+    g++ -o Q2 Q2.cpp
+    ./Q2
+    g++ -o Q3 Q3.cpp
+    ./Q3
 
 Each program expects input from standard input (e.g., keyboard or input redirection). The output will be printed to the console.
