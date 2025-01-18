@@ -56,7 +56,11 @@ The program contains several key functions:
 
 ## Compilation:
 To compile the program, run the following command:
+
         g++ -o schedule A3-810101408.cpp
+
 ## Running the Program:
 After compilation, you can run the program using:
+
         ./schedule
+
