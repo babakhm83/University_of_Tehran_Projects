@@ -57,9 +57,9 @@ Amin: 09:30 11:00
 
 ## Compilation:
 To compile the program, run the following command:
-	```bash
-	g++ -o schedule A3-810101408.cpp
+        ```bash
+        g++ -o schedule A3-810101408.cpp
 ## Running the Program:
 After compilation, you can run the program using:
-	```bash
-	./schedule
+        ```bash
+        ./schedule
