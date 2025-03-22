@@ -1,0 +1,90 @@
+module buffer_read_controller_IFMap_tb();
+    parameter SPAD_ADDR_WIDTH = 2, SPAD_DEPTH = 4,DATA_WIDTH = 3,BUFFER_DEPTH=4;
+    reg clk=0,rst=1,start=0,done=0,wen_buf=0,clr=1'b1;
+    reg [DATA_WIDTH+1:0] buf_in;
+    wire [DATA_WIDTH+1:0] buf_out;
+    wire ren_buf,wen_spad,ready,valid;
+    wire [SPAD_ADDR_WIDTH-1:0] spad_waddr,end_data;
+    circular_buffer#(.PAR_WRITE(1),.PAR_READ(1),.DEPTH(BUFFER_DEPTH),.BITS(DATA_WIDTH+2))fifo
+    (.clk(clk),.rst(rst),.read_en(ren_buf),.write_en(wen_buf),.din(buf_in), .valid(valid),.ready(ready),.dout(buf_out));
+    buffer_read_controller_IFMap#(.SPAD_ADDR_WIDTH(SPAD_ADDR_WIDTH), .SPAD_DEPTH(SPAD_DEPTH))controller
+    (.stall(1'b0),.clr_addr(1'b0),.spad_raddr(spad_waddr),.valid(valid),.init(start),.start_row(buf_out[DATA_WIDTH+1]),.end_row(buf_out[DATA_WIDTH]),.done(done),.clk(clk),.rst(rst), 
+    .ren_buf(ren_buf),.wen_spad(wen_spad),.valid_start(),.valid_end(),.spad_waddr(spad_waddr),.start_data(),.end_data(end_data));
+    register_type_scratchpad#(.DATA_WIDTH(DATA_WIDTH),.ADDR_WIDTH(SPAD_ADDR_WIDTH),.DEPTH(SPAD_DEPTH))spad
+    (.raddr(),.waddr(spad_waddr),.wen(wen_spad),.din(buf_out[DATA_WIDTH-1:0]),.clk(clk),.rst(rst), .dout());
+    always begin #19;clk=~clk;end
+    initial begin
+        #19;
+        #38; rst=1'b0; clr=1'b0;
+        #38; start = 1'b1;
+        #38; start = 1'b0;
+        #38; wen_buf = 1'b1; buf_in = {2'b10,3'd1};
+        #38; buf_in = {2'b00,3'd2};
+        #38; buf_in = {2'b00,3'd3};
+        #38; buf_in = {2'b01,3'd4};
+        #38; wen_buf = 1'b0;
+        #38; done = 1'b1;
+        #38; done=1'b0;
+        #38; rst=1'b1; clr=1'b1;
+        #38; rst=1'b0; clr=1'b0;
+        #38; start = 1'b1;
+        #38; start = 1'b0;
+        #38; wen_buf = 1'b1; buf_in = {2'b10,3'd1};
+        #38; buf_in = {2'b00,3'd2};
+        #38; buf_in = {2'b00,3'd3};
+        #38; buf_in = {2'b01,3'd4};
+        #38; wen_buf = 1'b0; 
+        #38; 
+        #38; done = 1'b1;
+        #38; done=1'b0;
+        #38; rst=1'b1; clr=1'b1;
+        #38; rst=1'b0; clr=1'b0;
+        #38; start = 1'b1;
+        #38; start = 1'b0;
+        #38; wen_buf = 1'b1; buf_in = {2'b10,3'd1};
+        #38; buf_in = {2'b01,3'd2};
+        #38; buf_in = {2'b10,3'd3};done=1'b1;
+        #38; buf_in = {2'b01,3'd4};done=1'b0;
+        #38; wen_buf = 1'b0;
+        #38; 
+        #38; done = 1'b1;
+        #38; done=1'b0;
+        #38; rst=1'b1; clr=1'b1;
+        #38; rst=1'b0; clr=1'b0;
+        #38; start = 1'b1;
+        #38; start = 1'b0;
+        #38; wen_buf = 1'b1; buf_in = {2'b10,3'd1};
+        #38; buf_in = {2'b01,3'd2};
+        #38; buf_in = {2'b10,3'd3};
+        #38; buf_in = {2'b01,3'd4};done=1'b1;
+        #38; wen_buf = 1'b0;done=1'b0;
+        #38; 
+        #38; 
+        #38; 
+        #38; rst=1'b1; clr=1'b1;
+        #38; rst=1'b0; clr=1'b0;
+        #38; start = 1'b1;
+        #38; start = 1'b0;
+        #38; wen_buf = 1'b1; buf_in = {2'b10,3'd1};
+        #38; buf_in = {2'b01,3'd2};
+        #38; buf_in = {2'b10,3'd3};
+        #38; buf_in = {2'b01,3'd4};
+        #38; wen_buf = 1'b0;done = 1'b1;
+        #38; done=1'b0;
+        #38; 
+        #38; 
+        #38; rst=1'b1; clr=1'b1;
+        #38; rst=1'b0; clr=1'b0;
+        #38; start = 1'b1;
+        #38; start = 1'b0;
+        #38; wen_buf = 1'b1; buf_in = {2'b10,3'd1};
+        #38; buf_in = {2'b01,3'd2};
+        #38; buf_in = {2'b10,3'd3};
+        #38; buf_in = {2'b01,3'd4};
+        #38; wen_buf = 1'b0;
+        #38; done = 1'b1;
+        #38; done=1'b0;
+        #380; 
+        $stop;
+    end
+endmodule
