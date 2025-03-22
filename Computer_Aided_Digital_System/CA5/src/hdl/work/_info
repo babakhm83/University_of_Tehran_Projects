@@ -1,0 +1,761 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1/modelsim_ase/win32aloem
+vadd_and_mod
+Z0 !s110 1736254061
+!i10b 1
+!s100 8zHMO]ICSfl<;e1`eHo_m0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IkGY`Bf^900?8oZ<5KX:m]0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl
+w1734537124
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Add_and_mod.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Add_and_mod.v
+!i122 0
+L0 1 9
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1736254061.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Add_and_mod.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Add_and_mod.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vadder
+R0
+!i10b 1
+!s100 N6Bb;_k:DLPXi9h`^2dZa2
+R1
+I?j_4Wgb8@GQKW5dWlhhMS1
+R2
+R3
+w1734516683
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Adder.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Adder.v
+!i122 1
+Z8 L0 1 7
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Adder.v|
+!i113 1
+R6
+R7
+vbuffer
+R0
+!i10b 1
+!s100 ej6W@ll@J?KD5kF:B@^zT0
+R1
+I9>`>9BdIR93af8gaVHWfo2
+R2
+R3
+w1734464885
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer.v
+!i122 2
+L0 1 31
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer.v|
+!i113 1
+R6
+R7
+vbuffer_read_controller_Filter
+!s110 1736324706
+!i10b 1
+!s100 he8JODnQF@zB:Q<hUCn;33
+R1
+I6CgE0CSlXh4<Zi0oN:D?i3
+R2
+R3
+w1736324704
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_read_controller_Filter.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_read_controller_Filter.v
+!i122 155
+L0 1 37
+R4
+r1
+!s85 0
+31
+!s108 1736324706.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_read_controller_Filter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_read_controller_Filter.v|
+!i113 1
+R6
+R7
+nbuffer_read_controller_@filter
+vbuffer_read_controller_IFMap
+Z9 !s110 1736354582
+!i10b 1
+!s100 7hE]eV:O:o>Njh354:51c0
+R1
+IRRW@5QTf@c^>=584;B6]H3
+R2
+R3
+w1736353627
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_read_controller_IFMap.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_read_controller_IFMap.v
+!i122 306
+L0 1 50
+R4
+r1
+!s85 0
+31
+!s108 1736354581.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_read_controller_IFMap.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_read_controller_IFMap.v|
+!i113 1
+R6
+R7
+nbuffer_read_controller_@i@f@map
+vbuffer_write_controller
+!s110 1736312995
+!i10b 1
+!s100 o`7Jm2?nH=KnLZ@0A3EVF2
+R1
+IYk[I6ODGe^m@bA8EK^9Nj1
+R2
+R3
+w1736312972
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_write_controller.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_write_controller.v
+!i122 118
+L0 1 28
+R4
+r1
+!s85 0
+31
+!s108 1736312995.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_write_controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Buffer_write_controller.v|
+!i113 1
+R6
+R7
+vcircular_buffer
+Z10 !s110 1736254062
+!i10b 1
+!s100 DATHnC@5W?^:HWJ[L?V[@3
+R1
+I^kAQ2GT2g3ZS]j1>VfCFb1
+R2
+R3
+w1734437168
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Circular_buffer.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Circular_buffer.v
+!i122 6
+L0 1 10
+R4
+r1
+!s85 0
+31
+Z11 !s108 1736254062.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Circular_buffer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Circular_buffer.v|
+!i113 1
+R6
+R7
+vcontroller_circular_buffer
+R10
+!i10b 1
+!s100 4ZoMhcQAc2CD:gzhml3O40
+R1
+IhiafG>`[HDYkaRAH`nSD40
+R2
+R3
+w1734438157
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Controller_fifo.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Controller_fifo.v
+!i122 7
+L0 1 12
+R4
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Controller_fifo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Controller_fifo.v|
+!i113 1
+R6
+R7
+vcounter
+R10
+!i10b 1
+!s100 kPm?Z:jR3H>ROI_9jn2><1
+R1
+IAP`=@;J`bYaH3GkoUNheT3
+R2
+R3
+w1734695633
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter.v
+!i122 8
+L0 1 23
+R4
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter.v|
+!i113 1
+R6
+R7
+vcounter_circular_buffer
+R10
+!i10b 1
+!s100 f9YP`TX@PFX>9P4L1zhaG2
+R1
+IVIZbmFR7TPMH9gA135D]f0
+R2
+R3
+w1734437028
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter_fifo.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter_fifo.v
+!i122 9
+Z12 L0 1 14
+R4
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter_fifo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter_fifo.v|
+!i113 1
+R6
+R7
+vcounter_with_load
+R10
+!i10b 1
+!s100 A7j<z]]BBLb1f2nPRccSQ3
+R1
+I5nnK^[0K^FIKZW]ld7C^L1
+R2
+R3
+w1734695702
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter_wth_load.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter_wth_load.v
+!i122 10
+Z13 L0 1 21
+R4
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter_wth_load.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Counter_wth_load.v|
+!i113 1
+R6
+R7
+vdatapath_circular_buffer
+R10
+!i10b 1
+!s100 dE6M3[G4O:>FOIX8jEzS21
+R1
+IUAG26JK1[cEITH2c05V>33
+R2
+R3
+w1734438710
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Datapath_fifo.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Datapath_fifo.v
+!i122 11
+Z14 L0 1 19
+R4
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Datapath_fifo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Datapath_fifo.v|
+!i113 1
+R6
+R7
+vmain_control_unit
+R9
+!i10b 1
+!s100 9NRSHD`?7[VO<jFl0OCRU2
+R1
+IzC2:CYkol<IL4VjVzzPNP3
+R2
+R3
+w1736351788
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Main_control_unit.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Main_control_unit.v
+!i122 307
+L0 1 59
+R4
+r1
+!s85 0
+31
+!s108 1736354582.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Main_control_unit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Main_control_unit.v|
+!i113 1
+R6
+R7
+vmultiplexer
+R10
+!i10b 1
+!s100 UVG7b:iR2hHa9Y5U5Hdgg2
+R1
+Ig<ER88:=7@A7eNA1TGKCm0
+R2
+R3
+w1736244191
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Multiplexer.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Multiplexer.v
+!i122 12
+L0 1 6
+R4
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Multiplexer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Multiplexer.v|
+!i113 1
+R6
+R7
+vmultiplier
+R10
+!i10b 1
+!s100 NWWKCX]X5g[n4m>_mZkmj2
+R1
+I9l4NZ[75^0bc3L>9;Mfn91
+R2
+R3
+w1734695570
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Multiplier.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Multiplier.v
+!i122 13
+R8
+R4
+r1
+!s85 0
+31
+R11
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Multiplier.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Multiplier.v|
+!i113 1
+R6
+R7
+vpipeline
+!s110 1736357564
+!i10b 1
+!s100 >3a_fM_l=nonWUd`<KQBb1
+R1
+ID3m4BXQMVm`VQZ<nGG3F00
+R2
+R3
+w1736357503
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Pipeline.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Pipeline.v
+!i122 315
+L0 1 30
+R4
+r1
+!s85 0
+31
+!s108 1736357564.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Pipeline.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Pipeline.v|
+!i113 1
+R6
+R7
+vProcessing_element
+!s110 1736361077
+!i10b 1
+!s100 Y;Ai8eI><ZGX0Rd2RU7`31
+R1
+I=RKEN>BFT:TnW6A3<OaNa2
+R2
+R3
+w1736360906
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Processing_element.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Processing_element.v
+!i122 317
+L0 1 69
+R4
+r1
+!s85 0
+31
+!s108 1736361077.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Processing_element.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Processing_element.v|
+!i113 1
+R6
+R7
+n@processing_element
+vProcessing_element_tb1
+!s110 1736347502
+!i10b 1
+!s100 17FN82;]bE6B2<R92;2Wi2
+R1
+IjFmVP6UYlE48JG`S[KIM71
+R2
+R3
+w1736345798
+Z15 8D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb1_2.v
+Z16 FD:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb1_2.v
+!i122 290
+Z17 L0 1 54
+R4
+r1
+!s85 0
+31
+!s108 1736347502.000000
+Z18 !s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb1_2.v|
+Z19 !s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb1_2.v|
+!i113 1
+R6
+R7
+n@processing_element_tb1
+vProcessing_element_tb1_2
+!s110 1736347557
+!i10b 1
+!s100 D4B8HiaZg5;RW]:n6d7_73
+R1
+ICjihU;n[nc6=DXM1i^Y2j2
+R2
+R3
+w1736347555
+R15
+R16
+!i122 291
+R17
+R4
+r1
+!s85 0
+31
+!s108 1736347557.000000
+R18
+R19
+!i113 1
+R6
+R7
+n@processing_element_tb1_2
+vProcessing_element_tb2
+!s110 1736341349
+!i10b 1
+!s100 RbOHWD?TY7=K8KKSmNZ9b3
+R1
+I6mMK^M>k;ZU>z8ZZ1Rc>Z3
+R2
+R3
+w1736341345
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb2.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb2.v
+!i122 247
+L0 1 49
+R4
+r1
+!s85 0
+31
+!s108 1736341348.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb2.v|
+!i113 1
+R6
+R7
+n@processing_element_tb2
+vProcessing_element_tb2_2
+!s110 1736348159
+!i10b 1
+!s100 [Q:V`=2mD6>J;mzPVeA]m0
+R1
+IM:@K;=KoBPMWlmUbkNg[T3
+R2
+R3
+w1736348157
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb2_2.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb2_2.v
+!i122 298
+Z20 L0 1 52
+R4
+r1
+!s85 0
+31
+!s108 1736348159.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb2_2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb2_2.v|
+!i113 1
+R6
+R7
+n@processing_element_tb2_2
+vProcessing_element_tb3
+!s110 1736349774
+!i10b 1
+!s100 aV95J[KiP>nm;5z3HB5fN3
+R1
+IK@LY1A@Ll6;ne8?Vg0e0]2
+R2
+R3
+w1736349772
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3.v
+!i122 302
+R17
+R4
+r1
+!s85 0
+31
+!s108 1736349774.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3.v|
+!i113 1
+R6
+R7
+n@processing_element_tb3
+vProcessing_element_tb3_1
+!s110 1736350027
+!i10b 1
+!s100 A[z0f<:T_iRbVShCjIfck1
+R1
+IA?On42nf3o0?_[903nj``1
+R2
+R3
+w1736350008
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3_1.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3_1.v
+!i122 303
+R20
+R4
+r1
+!s85 0
+31
+!s108 1736350026.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3_1.v|
+!i113 1
+R6
+R7
+n@processing_element_tb3_1
+vProcessing_element_tb3_2
+!s110 1736350340
+!i10b 1
+!s100 W77<^K[?^:GlgkP>b53]83
+R1
+I4]aWdJmf@bP?S@[9jEK2I0
+R2
+R3
+w1736350299
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3_2.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3_2.v
+!i122 304
+R20
+R4
+r1
+!s85 0
+31
+!s108 1736350339.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3_2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb3_2.v|
+!i113 1
+R6
+R7
+n@processing_element_tb3_2
+vProcessing_element_tb4
+Z21 !s110 1736336805
+!i10b 1
+!s100 onX7D73EI1YI:U@7YiUjo2
+R1
+I=F0_QZUG>fJ?cTD30jKUS3
+R2
+R3
+w1734888225
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb4.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb4.v
+!i122 237
+L0 1 84
+R4
+r1
+!s85 0
+31
+!s108 1736336804.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb4.v|
+!i113 1
+R6
+R7
+n@processing_element_tb4
+vProcessing_element_tb5
+R21
+!i10b 1
+!s100 7LVhIL8^ZcT_ZRmXcTf1@3
+R1
+Ij;oLG2lWhNafIPK6E]`<L2
+R2
+R3
+w1734887007
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb5.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb5.v
+!i122 238
+L0 1 81
+R4
+r1
+!s85 0
+31
+!s108 1736336805.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb5.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb5.v|
+!i113 1
+R6
+R7
+n@processing_element_tb5
+vProcessing_element_tb_mine
+!s110 1736354583
+!i10b 1
+!s100 QYPU9b_mAn=R7RzHo815e2
+R1
+IH3liiG4mGBSGocXh15c6W2
+R2
+R3
+w1736350801
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb_mine.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb_mine.v
+!i122 310
+L0 1 122
+R4
+r1
+!s85 0
+31
+!s108 1736354583.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb_mine.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/sim/tb/Processing_element_tb_mine.v|
+!i113 1
+R6
+R7
+n@processing_element_tb_mine
+vread_address_generator
+!s110 1736331255
+!i10b 1
+!s100 ]UDcbT5<P6:Q_[e;9IV6`2
+R1
+IfkXWnkBC`Rdoano`0YTK<1
+R2
+R3
+w1736331254
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Read_address_generator.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Read_address_generator.v
+!i122 186
+L0 1 39
+R4
+r1
+!s85 0
+31
+!s108 1736331255.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Read_address_generator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Read_address_generator.v|
+!i113 1
+R6
+R7
+vregister
+Z22 !s110 1736254063
+!i10b 1
+!s100 c@W=Q_`03WXM9TgkB46??3
+R1
+I^2NhX_BTH<KT6=M6k5JHo1
+R2
+R3
+w1734530048
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Register.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Register.v
+!i122 15
+R12
+R4
+r1
+!s85 0
+31
+Z23 !s108 1736254063.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Register.v|
+!i113 1
+R6
+R7
+vregister_type_scratchpad
+!s110 1736313685
+!i10b 1
+!s100 4]PKHZ@:j2AYDTZ79f<7_1
+R1
+IdniK=>z:J4^mi71JU8m^I3
+R2
+R3
+w1736313683
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Register_type_scratchpad.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Register_type_scratchpad.v
+!i122 122
+R14
+R4
+r1
+!s85 0
+31
+!s108 1736313685.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Register_type_scratchpad.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Register_type_scratchpad.v|
+!i113 1
+R6
+R7
+vSRAM_type_scratchpad
+R22
+!i10b 1
+!s100 fV@T8W2l44OMOTMEaRhz:3
+R1
+IASh=d7=ko@8N8L:e:e15T1
+R2
+R3
+w1734450251
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/SRAM_type_scratchpad.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/SRAM_type_scratchpad.v
+!i122 17
+R13
+R4
+r1
+!s85 0
+31
+R23
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/SRAM_type_scratchpad.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/SRAM_type_scratchpad.v|
+!i113 1
+R6
+R7
+n@s@r@a@m_type_scratchpad
+vup_down_counter
+!s110 1736254096
+!i10b 1
+!s100 Y_C?AFl1;M<N<]zeKW01D3
+R1
+I0iYWJhloz74JmlaibYd_=0
+R2
+R3
+w1736254091
+8D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Up_down_counter.v
+FD:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Up_down_counter.v
+!i122 19
+L0 1 18
+R4
+r1
+!s85 0
+31
+!s108 1736254096.000000
+!s107 D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Up_down_counter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Codes/verilog/2024/CAD/CA5/trunk/src/hdl/Up_down_counter.v|
+!i113 1
+R6
+R7
