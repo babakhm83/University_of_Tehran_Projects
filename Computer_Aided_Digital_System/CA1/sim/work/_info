@@ -1,0 +1,287 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/University/Codes/verilog/2024/CAD/CA1/trunk/sim
+vapproximate_multiplier
+!s10a 1728649758
+Z1 !s110 1728826872
+!i10b 1
+!s100 H2za7IViV53``W]blNDU;1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IG?aQ7QIX323BUENP@zVMa2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1728649758
+8../src/hdl/Approximate_multiplier.v
+F../src/hdl/Approximate_multiplier.v
+!i122 0
+L0 1 10
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1728826871.000000
+!s107 ../src/hdl/Approximate_multiplier.v|
+!s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/Approximate_multiplier.v|
+!i113 1
+Z5 o+acc -source
+Z6 !s92 +acc -source +define+SIM
+Z7 tCvgOpt 0
+vApproximate_multiplier_tb
+!s10a 1729116316
+!s110 1729116248
+!i10b 1
+!s100 3>;RdoIbQ=cnXV=Te^[no2
+R2
+I5L4joNH<EI9=AKfz<[USN3
+R3
+R0
+w1729116219
+Z8 8./tb/Approximate_multiplier_tb.v
+Z9 F./tb/Approximate_multiplier_tb.v
+!i122 10
+Z10 L0 1 14
+R4
+r1
+!s85 0
+31
+!s108 1729116248.000000
+Z11 !s107 ./tb/Approximate_multiplier_tb.v|
+Z12 !s90 -reportprogress|300|+acc|-incr|-source|+incdir+../src/inc|+define+SIM|./tb/Approximate_multiplier_tb.v|
+!i113 1
+R5
+Z13 !s92 +acc -source +incdir+../src/inc +define+SIM
+R7
+n@approximate_multiplier_tb
+vapproximate_multiplier_tb
+!s10a 1728597890
+Z14 !s110 1728826874
+!i10b 1
+!s100 g<1<Yi<j6nTahVN]5_mhk1
+R2
+Ic0IFgTXPn6gdVf:A9BOjV0
+R3
+R0
+w1728597890
+R8
+R9
+!i122 9
+R10
+R4
+r1
+!s85 0
+31
+Z15 !s108 1728826874.000000
+R11
+R12
+!i113 1
+R5
+R13
+R7
+vcontroller
+!s10a 1728824753
+R1
+!i10b 1
+!s100 m>`3T5]AJ5B?Eb[<Q]SVd0
+R2
+Ijkelg86@9bS2[5n7GKSc`1
+R3
+R0
+w1728824753
+8../src/hdl/Controller.v
+F../src/hdl/Controller.v
+!i122 1
+L0 1 44
+R4
+r1
+!s85 0
+31
+Z16 !s108 1728826872.000000
+!s107 ../src/hdl/Controller.v|
+!s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/Controller.v|
+!i113 1
+R5
+R6
+R7
+vcounter
+!s10a 1728600651
+R1
+!i10b 1
+!s100 Wn?HCXP`kb^D9g3M`oUEc2
+R2
+I02i7m?=JDSPS[Wd9dIN5P3
+R3
+R0
+w1728600651
+8../src/hdl/Counter.v
+F../src/hdl/Counter.v
+!i122 2
+L0 1 16
+R4
+r1
+!s85 0
+31
+R16
+!s107 ../src/hdl/Counter.v|
+!s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/Counter.v|
+!i113 1
+R5
+R6
+R7
+vcounter_with_two_cnt
+!s10a 1728644744
+R1
+!i10b 1
+!s100 Gnn8`_cMCK4f@l?gUeYdI3
+R2
+Ig4:=d@dik@C7M6mQ>UIA<0
+R3
+R0
+w1728644744
+8../src/hdl/Counter_with_two_cnt.v
+F../src/hdl/Counter_with_two_cnt.v
+!i122 3
+Z17 L0 1 22
+R4
+r1
+!s85 0
+31
+R16
+!s107 ../src/hdl/Counter_with_two_cnt.v|
+!s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/Counter_with_two_cnt.v|
+!i113 1
+R5
+R6
+R7
+vdatapath
+!s10a 1728824043
+Z18 !s110 1728826873
+!i10b 1
+!s100 GJgko^?GQQnaKkYc`89UF2
+R2
+IKdQcNY;ee3`MQ;_85Fn_J0
+R3
+R0
+w1728824043
+8../src/hdl/Datapath.v
+F../src/hdl/Datapath.v
+!i122 4
+R17
+R4
+r1
+!s85 0
+31
+R16
+!s107 ../src/hdl/Datapath.v|
+!s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/Datapath.v|
+!i113 1
+R5
+R6
+R7
+vinput_ram
+!s10a 1728824988
+R18
+!i10b 1
+!s100 ]^M3BJ[Tj5<>cD^feYN0^1
+R2
+I9e@_VPA0gQGH?4IJFLC^b1
+R3
+R0
+w1728824988
+8../src/hdl/Input_RAM.v
+F../src/hdl/Input_RAM.v
+!i122 5
+Z19 L0 1 17
+R4
+r1
+!s85 0
+31
+Z20 !s108 1728826873.000000
+!s107 ../src/hdl/Input_RAM.v|
+!s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/Input_RAM.v|
+!i113 1
+R5
+R6
+R7
+vmultiplier
+!s10a 1728645973
+R18
+!i10b 1
+!s100 SW<eeOiI74J9CYecB]<@O2
+R2
+I:z=m4DjW<jgFCN7U91EO_1
+R3
+R0
+w1728645973
+8../src/hdl/Multiplier.v
+F../src/hdl/Multiplier.v
+!i122 6
+L0 1 5
+R4
+r1
+!s85 0
+31
+R20
+!s107 ../src/hdl/Multiplier.v|
+!s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/Multiplier.v|
+!i113 1
+R5
+R6
+R7
+voutput_ram
+!s10a 1729117181
+!s110 1729117279
+!i10b 1
+!s100 HGXQL[TMgDjmEU:QkU10b3
+R2
+I1Nh?j8c?3QXfK_92Y7aV:0
+R3
+R0
+w1729117181
+8../src/hdl/output_RAM.v
+F../src/hdl/output_RAM.v
+!i122 12
+L0 1 23
+R4
+r1
+!s85 0
+31
+!s108 1729117279.000000
+!s107 ../src/hdl/output_RAM.v|
+!s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/output_RAM.v|
+!i113 1
+R5
+R6
+R7
+vregister_pin
+!s10a 1728641329
+R14
+!i10b 1
+!s100 6@]RFIha1naC>7O8SYD9H3
+R2
+I@<98<KeG?1;GeHWA6bDI_2
+R3
+R0
+w1728641329
+8../src/hdl/Register_pin.v
+F../src/hdl/Register_pin.v
+!i122 8
+R19
+R4
+r1
+!s85 0
+31
+R15
+!s107 ../src/hdl/Register_pin.v|
+!s90 -reportprogress|300|+acc|-incr|-source|+define+SIM|../src/hdl/Register_pin.v|
+!i113 1
+R5
+R6
+R7
