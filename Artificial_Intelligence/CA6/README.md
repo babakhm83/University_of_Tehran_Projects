@@ -7,7 +7,7 @@ A two-agent competitive Snake game where both snakes learn to play via tabular Q
 **Author:** Babak Hosseini Mohtasham
 **Assignment specification:** [`AI-CA6-Description.pdf`](./AI-CA6-Description.pdf)
 
-*This folder is part of a larger [multi-course assignment archive](../../). See [`Code_clean/`](./Code_clean) for the implementation described below.*
+*This folder is part of a larger [multi-course assignment archive](../../). See [`Code/`](./Code) for the implementation described below.*
 
 ---
 
