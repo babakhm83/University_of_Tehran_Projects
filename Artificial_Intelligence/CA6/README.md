@@ -36,8 +36,7 @@ Both snakes share the same core mechanics — move on a grid, eat food to grow, 
 
 | Path | Description |
 |---|---|
-| [`Code_clean/`](./Code_clean) | Cleaned, runnable version of the final implementation: `snake.py`, `dummysnake.py`, `main.py`, `cube.py`, `utility.py`, `constants.py` |
-| [`Code_clean/archive/`](./Code_clean/archive) | Earlier iterations of the agent, kept for reference (simpler state representation, no learning-rate decay) |
+| [`Code/`](./Code) | The final implementation: `snake.py`, `dummysnake.py`, `main.py`, `cube.py`, `utility.py`, `constants.py` |
 | [`Report/`](./Report) | Saved Q-tables (`.npy`) and training/evaluation plots (win history, reward history, food-eaten heatmap, game-length history) |
 | [`AI-CA6-Description.pdf`](./AI-CA6-Description.pdf) | Original assignment specification (also covers an unrelated MDP/Value Iteration question from the same assignment) |
 
